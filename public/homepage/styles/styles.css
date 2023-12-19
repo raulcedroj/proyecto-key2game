@@ -87,6 +87,10 @@
     /* Ocupa todo el ancho del carousel */
 }
 
+.new-container img{
+    border-radius: 20px;
+}
+
 .end-75 {
     right: 75%;
 }

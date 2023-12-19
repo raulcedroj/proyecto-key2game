@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Configuración del middleware cors
 app.use(cors({
-    origin: ['http://localhost:5500', 'http://127.0.0.1:5500'], // Cambia esto a tu URL de desarrollo
+    origin: ['http://localhost:5500', 'http://127.0.0.1:5500', 'http://localhost:5501', 'http://127.0.0.1:5501'], // Cambia esto a tu URL de desarrollo
     methods: 'GET,PUT,POST,DELETE', // Métodos permitidos
     optionsSuccessStatus: 200 // Algunos navegadores antiguos (IE11) pueden tener problemas con 204
 }));

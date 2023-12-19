@@ -54,10 +54,6 @@ function loadTopGames() {
         .catch(error => console.error('Error:', error));
 }
 
-
-
-
-
 // Función para cargar los 3 juegos más recientes
 function loadRecentGames() {
     fetch('http://localhost:3000/api/juegos?sortBy=date&limit=3') // Ordenar por fecha y limitar a 3 juegos
@@ -66,9 +62,26 @@ function loadRecentGames() {
             // Actualiza la lista de juegos recientes
             const recentGamesList = document.getElementById('recentGamesList');
             data.juegos.forEach(juego => {
-                const li = document.createElement('li');
-                li.textContent = `${juego.Nombre_Juego} - Fecha de salida: ${juego.Fecha_Salida}`;
-                recentGamesList.appendChild(li);
+
+                const div = document.createElement('div');
+                div.classList.add('new-container', 'col-2', 'text-center');
+                const img = document.createElement('img');
+                img.classList.add('d-inline', 'w-100', 'h-50');
+                img.src = juego.url_img; // Asegúrate de tener la URL de la imagen desde tu API
+                img.alt = `${juego.Nombre_Juego}`;
+
+                const gameName = document.createElement('h3');
+                gameName.classList.add('d-inline', 'm-3', 'text-black', 'z-index-1');
+                gameName.textContent = juego.Nombre_Juego; // Incluir el nombre del juego aquí
+
+                const buyButton = document.createElement('button');
+                buyButton.classList.add('btn', 'btn-primary', 'm-3', 'z-index-1');
+                buyButton.textContent = `${juego.Precio} €`;
+
+                div.appendChild(img);
+                div.appendChild(gameName);
+                div.appendChild(buyButton);
+                recentGamesList.appendChild(div);
             });
         })
         .catch(error => console.error('Error:', error));
@@ -83,7 +96,23 @@ function loadFirstGames() {
             const firstGames = document.getElementById('firstGames');
             data.juegos.forEach(juego => {
                 const div = document.createElement('div');
-                div.textContent = juego.Nombre_Juego;
+                div.classList.add('new-container', 'col-3', 'text-center', 'p-5');
+                const img = document.createElement('img');
+                img.classList.add('d-inline', 'w-100', 'h-50');
+                img.src = juego.url_img; // Asegúrate de tener la URL de la imagen desde tu API
+                img.alt = `${juego.Nombre_Juego}`;
+
+                const gameName = document.createElement('h3');
+                gameName.classList.add('d-inline', 'm-3', 'text-black', 'z-index-1');
+                gameName.textContent = juego.Nombre_Juego; // Incluir el nombre del juego aquí
+
+                const buyButton = document.createElement('button');
+                buyButton.classList.add('btn', 'btn-primary', 'm-3', 'z-index-1');
+                buyButton.textContent = `${juego.Precio} €`;
+
+                div.appendChild(img);
+                div.appendChild(gameName);
+                div.appendChild(buyButton);
                 firstGames.appendChild(div);
             });
         })
