@@ -1,0 +1,37 @@
+main {
+    background-color: rgb(128, 128, 128, .37);
+    border-radius: 5px;
+    margin-top: 20px;
+    border: solid 2px black;
+}
+
+.title-meth{
+    margin-left: 20px;
+}
+
+.new-container{
+    border-radius: 10px;
+    background-color: #fafafa;
+    border: solid 2px black;
+}
+
+#payment{
+    border-radius: 10px;
+    background-color: #fafafa;
+    border: solid 2px black;
+    margin-bottom: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h4{
+    padding: 10px;
+}
+
+#carrito{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}

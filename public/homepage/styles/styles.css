@@ -91,6 +91,12 @@
     border-radius: 20px;
 }
 
+#carrito{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
 .end-75 {
     right: 75%;
 }
