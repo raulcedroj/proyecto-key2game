@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap');
+html{
+    font-family: 'Raleway', sans-serif;
+
+}
+body{
+    width: 100vh;
+}
+
+#carrito{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+#container{
+    margin-left: 25%;
+    margin-top: 5%;
+    height: 400px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    background-color: #B1B1B1;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+#nombreJuego{
+    margin-right: 85%;
+    margin-top: 2%;
+    
+}
+
+#inner-container{
+    margin-top: 2%;
+    height: 200px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E8E8;
+    border: 1px solid black;
+    border-radius: 20px;
+    align-items: center;
+    padding: 10px;
+}
+
+#clave{
+    margin-right: 67%;
+    margin-top: 2%;
+    font-weight: 700;
+}
+
+#codigo{
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+#codigo-copiar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#copiar{
+    width: 40px;
+    height: 40px;
+    margin-top: 4%;
+}
+
+#button-pedidos{
+    width: 200px;
+    background-color: #000;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
