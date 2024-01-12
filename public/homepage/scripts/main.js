@@ -34,7 +34,7 @@ function loadTopGames() {
 
                 // Crear elemento para el precio
                 const price = document.createElement('h2');
-                price.classList.add('position-absolute', 'bottom-10', 'end-80', 'text-white', 'z-index-1');
+                price.classList.add('position-absolute', 'bottom-40', 'end-80', 'text-white', 'z-index-1');
                 price.textContent = `${juego.Precio} €`; // Incluir el precio del juego aquí
 
                 // Crear botón de "Comprar"
