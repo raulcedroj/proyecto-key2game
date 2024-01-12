@@ -21,6 +21,24 @@ app.use(cors({
     optionsSuccessStatus: 200 // Algunos navegadores antiguos (IE11) pueden tener problemas con 204
 }));
 
+//#region Login
+app.post('/api/login', (req, res) => {
+    const { usuario, contraseña } = req.body;
+
+    db.query('SELECT * FROM usuarios WHERE Usuario = ? AND Contraseña = ?', [usuario, contraseña], (err, results) => {
+        if (err) {
+            console.error('Error al realizar la consulta:', err);
+            res.status(500).json({ error: 'Error al iniciar sesión' });
+        } else {
+            if (results.length > 0) {
+                res.json({ message: 'Inicio de sesión exitoso' });
+            } else {
+                res.status(401).json({ error: 'Credenciales incorrectas' });
+            }
+        }
+    });
+});
+//#endregion
 
 //#region Usuarios
 // Ruta para obtener todos los usuarios
