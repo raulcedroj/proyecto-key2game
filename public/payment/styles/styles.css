@@ -5,8 +5,16 @@ main {
     border: solid 2px black;
 }
 
+body {
+    min-height: 400px;
+    margin-bottom: 200px; /* Evitar que el footer se coma contenido */
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .title-meth{
-    margin-left: 20px;
+    padding-left: 20px;
 }
 
 .new-container{
