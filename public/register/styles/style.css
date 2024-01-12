@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap');
+html{
+    font-family: 'Raleway', sans-serif;
+
+}
+body{
+    width: 100vh;
+}
+
+#img-mario{
+    width: 400px;
+    height: auto;
+    margin-left: 30%;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+}
+
+#form-container{
+    width: 100%;
+    margin-left: 25%;
+    margin-top: 5%;
+    height: 400px;
+
+}
+
+h3{
+    color: #000;
+}
+
+form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #B1B1B1;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+}
+
+#logo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+#flecha{
+    width: 30px;
+    height: 30px;
+
+}
+
+#key2game{
+    margin-right: 30%;
+}
+
+#button-volver{
+    font-weight: bolder;
+    font-family: 'Raleway', sans-serif;
+}
+
+#registrarse{
+    width: 150px;
+    background-color: #000;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.flex-button{
+    display: flex;
+    justify-content: center;
+}
